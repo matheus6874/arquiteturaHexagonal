@@ -5,7 +5,7 @@ import com.cristino.hexagonal.application.ports.out.FindAdressByZipCodeOutputPor
 import com.cristino.hexagonal.application.ports.out.InsertCustomerOutputPort;
 
 
-public class InsertCustomerUserCase {
+public class InsertCustomerUserCase implements InsertCustomerOutputPort{
     private final FindAdressByZipCodeOutputPort findAdressByZipCodeOutputPort;
 
     private final InsertCustomerOutputPort insertCustomerOutputPort;
@@ -19,5 +19,10 @@ public class InsertCustomerUserCase {
         var adress = findAdressByZipCodeOutputPort.find(zipCode);
         customer.setAdress(adress);
         insertCustomerOutputPort.insert(customer);
+    }
+
+    @Override
+    public void insert(Customer customer) {
+
     }
 }

@@ -12,4 +12,11 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hexagonal" options="-parameters" />
+      <module name="hexagonal.main" options="-parameters" />
+      <module name="hexagonal.test" options="-parameters" />
+    </option>
+  </component>
 </project>
